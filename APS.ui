@@ -194,7 +194,7 @@ QLabel {
 }</string>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tabCalculo">
            <attribute name="title">
@@ -405,9 +405,9 @@ QLabel {
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>40</y>
+              <y>50</y>
               <width>691</width>
-              <height>341</height>
+              <height>331</height>
              </rect>
             </property>
             <property name="frameShape">
