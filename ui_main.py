@@ -312,7 +312,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.lblTitulo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:28pt;\">EMERGIX</span></p></body></html>", None))
         self.lblLogo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\"><img src=\":/Icons/Icons/Logo_Emergix - principal.png\"/></p></body></html>", None))
-        self.lblUpload.setText(QCoreApplication.translate("MainWindow", u"Upload conclu\u00eddo!", None))
+        self.lblUpload.setText(QCoreApplication.translate("MainWindow", u"", None))
         self.btnUpload.setText(QCoreApplication.translate("MainWindow", u"Carregar arquivo", None))
         self.btnAbrirArquivo.setText(QCoreApplication.translate("MainWindow", u"Abrir", None))
         self.btnExcluirArquivo.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
@@ -323,8 +323,8 @@ class Ui_MainWindow(object):
         self.btnExtrairRelatorio.setText(QCoreApplication.translate("MainWindow", u"Extrair relat\u00f3rio", None))
         self.btnGrafico1.setText(QCoreApplication.translate("MainWindow", u"Emergia por \n"
 "processo", None))
-        self.btnGrafico2.setText(QCoreApplication.translate("MainWindow", u"Processos que \n"
-"mais consomem", None))
+        self.btnGrafico2.setText(QCoreApplication.translate("MainWindow", u"Ranking de \n"
+"consumo", None))
         self.tabConteudo.setTabText(self.tabConteudo.indexOf(self.tabResultado), QCoreApplication.translate("MainWindow", u"Resultado", None))
     # retranslateUi
 
