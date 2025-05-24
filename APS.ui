@@ -153,6 +153,7 @@ color: rgb(0, 86, 20)
           </property>
           <property name="font">
            <font>
+            <pointsize>9</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -194,7 +195,7 @@ QLabel {
 }</string>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="tabCalculo">
            <attribute name="title">
@@ -372,7 +373,10 @@ QLabel {
              </rect>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; text-decoration: underline;&quot;&gt;Instruções:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Para upload do arquivo CSV, siga este padrão para apresentação dos dados:&lt;/p&gt;&lt;p&gt;Coluna 1: nome do processo;&lt;/p&gt;&lt;p&gt;Coluna 2: nome do material utilizado;&lt;/p&gt;&lt;p&gt;Coluna 3: tipo de fluxo do material (indicar se o material foi utilizado na entrada ou se é a saída do processo);&lt;/p&gt;&lt;p&gt;Coluna 4: quantidade do material;&lt;/p&gt;&lt;p&gt;Coluna 5: unidade de medida do material;&lt;/p&gt;&lt;p&gt;Coluna 6: valor da transformidade do material;&lt;/p&gt;&lt;p&gt;Coluna 7: processo de origem do material (indicar qual o processo que originou aquele material).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline;&quot;&gt;Instruções:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Para upload do arquivo CSV, siga este padrão para apresentação dos dados:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 1: nome do processo;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 2: nome do material utilizado;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 3: tipo de fluxo do material (indicar se o material foi utilizado na entrada ou se é a saída do processo);&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 4: quantidade do material;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 5: unidade de medida do material;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 6: valor da transformidade do material;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Coluna 7: processo de origem do material (indicar qual o processo que originou aquele material).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
             </property>
            </widget>
           </widget>
@@ -436,7 +440,7 @@ QLabel {
                  <rect>
                   <x>10</x>
                   <y>10</y>
-                  <width>461</width>
+                  <width>481</width>
                   <height>281</height>
                  </rect>
                 </property>
@@ -449,7 +453,7 @@ QLabel {
                    <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>421</width>
+                    <width>451</width>
                     <height>241</height>
                    </rect>
                   </property>
@@ -461,7 +465,7 @@ QLabel {
                    <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>421</width>
+                    <width>451</width>
                     <height>241</height>
                    </rect>
                   </property>
@@ -471,7 +475,7 @@ QLabel {
                <widget class="QFrame" name="ctBtnGraficos">
                 <property name="geometry">
                  <rect>
-                  <x>510</x>
+                  <x>519</x>
                   <y>0</y>
                   <width>141</width>
                   <height>291</height>
@@ -579,8 +583,8 @@ processo</string>
                     <bool>false</bool>
                    </property>
                    <property name="text">
-                    <string>Processos que 
-mais consomem</string>
+                    <string>Ranking de 
+consumo</string>
                    </property>
                    <property name="flat">
                     <bool>false</bool>
@@ -605,6 +609,27 @@ mais consomem</string>
               </widget>
              </item>
             </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Ajuda</string>
+           </attribute>
+           <widget class="QLabel" name="lblAjuda">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>681</width>
+              <height>371</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline;&quot;&gt;Ajuda:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Para que seja possível realizar o cálculo, siga estes passos:&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;&quot;&gt;Passo 1:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; clique no botão &amp;quot;Carregar arquivo&amp;quot; para selecionar o arquivo CSV que deverá ser carregado.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;&quot;&gt;Importante:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; confira se a configuração do arquivo segue as orientações apresentadas na tela &amp;quot;Cálculo&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Caso precise visualizar o arquivo que foi carregado, basta clicar no botão &amp;quot;Abrir&amp;quot;. Se for necessário removê-lo, clique no botão &amp;quot;Excluir&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;&quot;&gt;Passo 2:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; clique no botão &amp;quot;Calcular&amp;quot; para iniciar o processo de cálculo, ao final você será direcionado automaticamente para tela &amp;quot;Resultado&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;&quot;&gt;Passo 3:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; o resultado será apresentado nos seguintes formatos:&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Exibição do consumo total de emergia no topo da tela.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Apresentação de uma tabela com o consumo de emergia por processo - acessar pelo botão &amp;quot;Emergia por processo&amp;quot;. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Gráfico apresentando os processos que mais consumiram emergia - acessar pelo botão &amp;quot;Ranking de consumo&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;&quot;&gt;Passo 4:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; estes resultados poderão ser extraídos em um relatório no formato PDF, para isto basta clicar no botão &amp;quot;Extrair relatório&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
            </widget>
           </widget>
          </widget>
