@@ -112,7 +112,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(0, 153, 153);\n"
+"	background-color: rgb(0, 153, 152);\n"
 "	color: rgb(255,255,255);\n"
 "}\n"
 "\n"
@@ -192,6 +192,7 @@ class Ui_MainWindow(object):
         self.btnCalcular = QPushButton(self.tabCalculo)
         self.btnCalcular.setObjectName(u"btnCalcular")
         self.btnCalcular.setGeometry(QRect(10, 340, 161, 31))
+        self.btnCalcular.setMinimumSize(QSize(0, 30))
         font3 = QFont()
         font3.setPointSize(11)
         font3.setBold(True)
