@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGraphicsView, QHBoxLayout,
     QLabel, QMainWindow, QPushButton, QSizePolicy,
     QSpacerItem, QStackedWidget, QTabWidget, QVBoxLayout,
     QWidget)
-import icons_rc
+import src.emergy_calculator.ui.resources.icons_rc as icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -324,9 +324,22 @@ class Ui_MainWindow(object):
         self.btnAbrirArquivo.setText(QCoreApplication.translate("MainWindow", u"Abrir", None))
         self.btnExcluirArquivo.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
         self.btnCalcular.setText(QCoreApplication.translate("MainWindow", u"Calcular", None))
-        self.lblInstrucoes.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; text-decoration: underline;\">Instru\u00e7\u00f5es:</span></p><p><span style=\" font-size:9pt;\">Para upload do arquivo CSV, siga este padr\u00e3o para apresenta\u00e7\u00e3o dos dados:</span></p><p><span style=\" font-size:9pt;\">Coluna 1: nome do processo;</span></p><p><span style=\" font-size:9pt;\">Coluna 2: nome do material utilizado;</span></p><p><span style=\" font-size:9pt;\">Coluna 3: tipo de fluxo do material (indicar se o material foi utilizado na entrada ou se \u00e9 a sa\u00edda do processo);</span></p><p><span style=\" font-size:9pt;\">Coluna 4: quantidade do material;</span></p><p><span style=\" font-size:9pt;\">Coluna 5: unidade de medida do material;</span></p><p><span style=\" font-size:9pt;\">Coluna 6: valor da transformidade do material;</span></p><p><span style=\" font-size:9pt;\">Coluna 7: processo de origem do material (indicar qual o processo que originou aquele material).</span></p></body></html>", None))
+        #self.lblInstrucoes.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; text-decoration: underline;\">Instru\u00e7\u00f5es:</span></p><p><span style=\" font-size:9pt;\">Para upload do arquivo CSV, siga este padr\u00e3o para apresenta\u00e7\u00e3o dos dados:</span></p><p><span style=\" font-size:9pt;\">Coluna 1: nome do processo;</span></p><p><span style=\" font-size:9pt;\">Coluna 2: nome do material utilizado;</span></p><p><span style=\" font-size:9pt;\">Coluna 3: tipo de fluxo do material (indicar se o material foi utilizado na entrada ou se \u00e9 a sa\u00edda do processo);</span></p><p><span style=\" font-size:9pt;\">Coluna 4: quantidade do material;</span></p><p><span style=\" font-size:9pt;\">Coluna 5: unidade de medida do material;</span></p><p><span style=\" font-size:9pt;\">Coluna 6: valor da transformidade do material;</span></p><p><span style=\" font-size:9pt;\">Coluna 7: processo de origem do material (indicar qual o processo que originou aquele material).</span></p></body></html>", None))
+        self.lblInstrucoes.setText(QCoreApplication.translate("MainWindow", u"""
+<html><head/><body>
+<p><span style=" font-size:12pt; text-decoration: underline;">Instruções: </span><span style=" font-size:9pt;">Para upload do arquivo CSV, siga este padrão para nomeação e apresentação das colunas:</span></p>
+<p><span style=" font-size:9pt;">Processo: nome do processo;</span></p>
+<p><span style=" font-size:9pt;">Material: nome do material avaliado;</span></p>
+<p><span style=" font-size:9pt;">Tipo_fluxo: indicar se o material foi usado na entrada ou se é a saída do processo;</span></p>
+<p><span style=" font-size:9pt;">Quantidade: quantidade do material;</span></p>
+<p><span style=" font-size:9pt;">Unidade: unidade de medida do material;</span></p>
+<p><span style=" font-size:9pt;">Transformidade: valor da transformidade do material;</span></p>
+<p><span style=" font-size:9pt;">Origem: indicar qual processo originou o material;</span></p>
+<p><span style=" font-size:9pt;">Destino: indicar para qual processo o material será destinado.</span></p>
+</body></html>
+""", None))
         self.tabConteudo.setTabText(self.tabConteudo.indexOf(self.tabCalculo), QCoreApplication.translate("MainWindow", u"C\u00e1lculo", None))
-        self.lblResultado.setText(QCoreApplication.translate("MainWindow", u"Quantidade total de emergia consumida:", None))
+        self.lblResultado.setText(QCoreApplication.translate("MainWindow", u"", None))
         self.btnExtrairRelatorio.setText(QCoreApplication.translate("MainWindow", u"Extrair relat\u00f3rio", None))
         self.btnGrafico1.setText(QCoreApplication.translate("MainWindow", u"Emergia por \n"
 "processo", None))
@@ -334,8 +347,8 @@ class Ui_MainWindow(object):
 "consumo", None))
         self.tabConteudo.setTabText(self.tabConteudo.indexOf(self.tabResultado), QCoreApplication.translate("MainWindow", u"Resultado", None))
         self.lblAjuda.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; text-decoration: underline;\">Ajuda:</span></p><p><span style=\" font-size:9pt;\">Para que seja poss\u00edvel realizar o c\u00e1lculo, siga estes passos:</span></p><p align=\"justify\"><span style=\" font-size:9pt; text-decoration: underline;\">Passo 1:</span><span style=\" font-size:9pt;\"> clique no bot\u00e3o &quot;Carregar arquivo&quot; para selecionar o arquivo CSV que dever\u00e1 ser carregado.</span></p><p align=\"justify\"><span style=\" font-size:9pt; text-decoration: underline;\">Importante:</span><span style=\" font-size:9pt;\"> confira se a configura\u00e7\u00e3o do arquivo segue as orienta\u00e7\u00f5es apresentadas na tela &quot;C\u00e1lculo&quot;.</span></p><p align=\"justify\"><span style=\" font-size:9pt;\">Caso precise visualizar o arquivo que foi carregado, basta clicar no bot\u00e3o &quot;Abrir&quot;. Se for necess\u00e1rio remov\u00ea-lo, clique no bot\u00e3o &quot;Excluir&quot;.</span></p><p align=\"justify\"><span style=\" font-size:9p"
-                        "t; text-decoration: underline;\">Passo 2:</span><span style=\" font-size:9pt;\"> clique no bot\u00e3o &quot;Calcular&quot; para iniciar o processo de c\u00e1lculo, ao final voc\u00ea ser\u00e1 direcionado automaticamente para tela &quot;Resultado&quot;.</span></p><p align=\"justify\"><span style=\" font-size:9pt; text-decoration: underline;\">Passo 3:</span><span style=\" font-size:9pt;\"> o resultado ser\u00e1 apresentado nos seguintes formatos:</span></p><p align=\"justify\"><span style=\" font-size:9pt;\">- Exibi\u00e7\u00e3o do consumo total de emergia no topo da tela.</span></p><p align=\"justify\"><span style=\" font-size:9pt;\">- Apresenta\u00e7\u00e3o de uma tabela com o consumo de emergia por processo - acessar pelo bot\u00e3o &quot;Emergia por processo&quot;. </span></p><p align=\"justify\"><span style=\" font-size:9pt;\">- Gr\u00e1fico apresentando os processos que mais consumiram emergia - acessar pelo bot\u00e3o &quot;Ranking de consumo&quot;.</span></p><p align=\"justify\"><span style=\" font-siz"
-                        "e:9pt; text-decoration: underline;\">Passo 4:</span><span style=\" font-size:9pt;\"> estes resultados poder\u00e3o ser extra\u00eddos em um relat\u00f3rio no formato PDF, para isto basta clicar no bot\u00e3o &quot;Extrair relat\u00f3rio&quot;.</span></p></body></html>", None))
+                        "t; text-decoration: underline;\">Passo 2:</span><span style=\" font-size:9pt;\"> clique no bot\u00e3o &quot;Calcular&quot; para iniciar o processo de c\u00e1lculo, ao final voc\u00ea ser\u00e1 direcionado automaticamente para tela &quot;Resultado&quot;.</span></p><p align=\"justify\"><span style=\" font-size:9pt; text-decoration: underline;\">Passo 3:</span><span style=\" font-size:9pt;\"> o resultado ser\u00e1 apresentado nos seguintes formatos:</span></p><p align=\"justify\"><span style=\" font-size:9pt;\"></span></p><p align=\"justify\"><span style=\" font-size:9pt;\">- Apresenta\u00e7\u00e3o de uma tabela com o consumo de emergia por processo - acessar pelo bot\u00e3o &quot;Emergia por processo&quot;. </span></p><p align=\"justify\"><span style=\" font-size:9pt;\">- Gr\u00e1fico apresentando os processos que mais consumiram emergia - acessar pelo bot\u00e3o &quot;Ranking de consumo&quot;.</span></p><p align=\"justify\"><span style=\" font-siz"
+                        "e:9pt; text-decoration: underline;\">Passo 4:</span><span style=\" font-size:9pt;\"> estes resultados poder\u00e3o ser extra\u00eddos em um relat\u00f3rio no formato Excel, para isto basta clicar no bot\u00e3o &quot;Extrair relat\u00f3rio&quot;.</span></p></body></html>", None))
         self.tabConteudo.setTabText(self.tabConteudo.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Ajuda", None))
     # retranslateUi
 

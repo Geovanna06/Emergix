@@ -1,9 +1,9 @@
 from PySide6.QtWidgets import QFileDialog, QWidget, QMessageBox
 import pandas as pd
 
-def selecionar_arquivo_csv(parent: QWidget = None) -> pd.DataFrame:
+def select_csv_file(parent: QWidget = None) -> pd.DataFrame:
     """
-    Abre uma janela para o usuário selecionar um arquivo CSV e retorna os dados como DataFrame.
+    Abre uma janela para o usuário selecionar um arquivo CSV e retorna os dados como DataFrame e caminho do arquivo.
     
     :param parent: Referência à janela principal (opcional)
     :return: DataFrame com os dados do CSV ou None se cancelado
@@ -16,12 +16,11 @@ def selecionar_arquivo_csv(parent: QWidget = None) -> pd.DataFrame:
     )
 
     if not caminho_arquivo:
-        #QMessageBox.warning(None, "Seleção de Arquivo", "Nenhum arquivo selecionado.")
-        return None  # Usuário cancelou
+        return None
 
     try:
         df = pd.read_csv(caminho_arquivo)
-        return df
+        return df, caminho_arquivo
     except Exception as e:
         print(f"Erro ao ler o arquivo CSV: {e}")
         return None
